@@ -1,0 +1,17 @@
+﻿@model HomeViewModel
+
+@*Chamando o  Carrosel de images*@
+<partial name="_Carousel"/> 
+
+
+<h2>Preferidos da Semana</h2>
+<h4>Tá com fome?</h4>
+
+<div class="row">
+
+    @foreach( var lanche in Model.LanchesPreferidos)
+    {
+        <partial name="_LanchesResumo" for="@lanche" />
+    }
+
+</div>
